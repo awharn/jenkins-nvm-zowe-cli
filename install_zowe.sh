@@ -25,6 +25,3 @@ npm install -g @zowe/cli@${PKG_TAG}
 zowe plugins install @zowe/zos-ftp-for-zowe-cli@${PKG_TAG} @zowe/cics-for-zowe-cli@${PKG_TAG} @zowe/db2-for-zowe-cli@${PKG_TAG} @zowe/ims-for-zowe-cli@${PKG_TAG} @zowe/mq-for-zowe-cli@${PKG_TAG}
 
 exit 0
-
-
-
