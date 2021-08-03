@@ -28,7 +28,6 @@ rm -rf ~/.zowe/plugins
 npm install -g @zowe/cli@${PKG_TAG}
 
 plugins=( @zowe/zos-ftp-for-zowe-cli@${PKG_TAG} @zowe/cics-for-zowe-cli@${PKG_TAG} @zowe/db2-for-zowe-cli@${PKG_TAG} @zowe/ims-for-zowe-cli@${PKG_TAG} @zowe/mq-for-zowe-cli@${PKG_TAG} )
-error=0
 
 for i in "${plugins[@]}"; do
     if [ ! -z "${ALLOW_PLUGIN_INSTALL_FAIL}" ]; then
