@@ -9,7 +9,7 @@ COPY docker-entrypoint-zowe.sh ${scriptsDir}
 COPY install_zowe.sh ${scriptsDir}
 
 # Install zowe-v1-lts by default
-RUN su -c "install_zowe.sh" - jenkins 
+RUN su -c "install_zowe.sh zowe-v1-lts" - jenkins 
 
 ENTRYPOINT ["docker-entrypoint-zowe.sh"]
 

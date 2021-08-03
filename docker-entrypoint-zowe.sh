@@ -13,6 +13,7 @@ set -e
 # Extract Node.js version from env var
 VERSION=$NODE_JS_NVM_VERSION
 TAG=$PKG_TAG
+APIF=$ALLOW_PLUGIN_INSTALL_FAIL
 
 if [ -z "$VERSION" ]; then
     echo "No version specified"
@@ -32,7 +33,7 @@ fi
 
 if [ ! -z "$TAG" ]; then
     # Do the install for jenkins
-    su -c "install_zowe.sh $TAG" - jenkins
+    su -c "install_zowe.sh $TAG $APIF" - jenkins
 fi
 
 # Execute passed cmd
