@@ -36,3 +36,11 @@ jobs:
       
       - name: Image Digest
         run:  echo ${{ steps.build.outputs.digest }}
+      
+      - name: Update Downstream - Next
+        uses: benc-uk/workflow-dispatch@v1
+        with: 
+          ref:      refs/heads/next
+          workflow: ci
+          repo:     awharn/jenkins-nvm-zowe-cli-extended
+          token:    ${{ secrets.PAT }}
