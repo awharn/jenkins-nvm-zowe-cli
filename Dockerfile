@@ -4,12 +4,16 @@ FROM awharn/jenkins-nvm-keytar
 
 USER root
 
+ENV DEFAULT_NODE_VERSION=16.6.1
 ARG scriptsDir=/usr/local/bin/
 COPY docker-entrypoint-zowe.sh ${scriptsDir}
 COPY install_zowe.sh ${scriptsDir}
 
-# Install zowe-v1-lts by default
-RUN su -c "install_zowe.sh zowe-v1-lts" - jenkins 
+# Install next by default
+# Not everything has a next version
+RUN install_node.sh ${DEFAULT_NODE_VERSION}
+RUN su -c "install_node.sh ${DEFAULT_NODE_VERSION}" - jenkins
+RUN su -c "install_zowe.sh next true" - jenkins 
 
 ENTRYPOINT ["docker-entrypoint-zowe.sh"]
 

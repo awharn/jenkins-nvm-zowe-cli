@@ -27,7 +27,7 @@ else
     su -c "install_node.sh $VERSION" - jenkins
 
     if [ -z "$TAG" ]; then
-        TAG=zowe-v1-lts
+        TAG=next
     fi
 fi
 

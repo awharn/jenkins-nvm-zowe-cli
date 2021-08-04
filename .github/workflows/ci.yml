@@ -2,7 +2,7 @@ name: ci
 on:
   push:
     branches:
-      - 'master'
+      - 'next'
   workflow_dispatch:
 
 jobs:
@@ -31,8 +31,8 @@ jobs:
         with:
           push: true
           tags: |
-            awharn/jenkins-nvm-zowe-cli:latest
-            ghcr.io/awharn/jenkins-nvm-zowe-cli:latest
+            awharn/jenkins-nvm-zowe-cli:next
+            ghcr.io/awharn/jenkins-nvm-zowe-cli:next
       
       - name: Image Digest
         run:  echo ${{ steps.build.outputs.digest }}
