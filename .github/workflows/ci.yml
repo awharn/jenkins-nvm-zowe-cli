@@ -31,8 +31,8 @@ jobs:
         with:
           push: true
           tags: |
-            awharn/jenkins-nvm-zowe-cli:next
-            ghcr.io/awharn/jenkins-nvm-zowe-cli:next
+            awharn/jenkins-nvm-zowe-cli:zowe-v2-lts
+            ghcr.io/awharn/jenkins-nvm-zowe-cli:zowe-v2-lts
       
       - name: Image Digest
         run:  echo ${{ steps.build.outputs.digest }}
