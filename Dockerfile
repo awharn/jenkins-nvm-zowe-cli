@@ -16,7 +16,7 @@ RUN cat ${scriptsDir}bashrc-update.txt >> /etc/bash.bashrc
 RUN cat ${scriptsDir}bashrc-update.txt >> /home/jenkins/.bashrc
 RUN rm ${scriptsDir}bashrc-update.txt
 
-RUN su -c "install_zowe.sh next true" - jenkins
+RUN su -c "install_zowe.sh zowe-v2-lts true" - jenkins
 
 ENTRYPOINT ["docker-entrypoint-zowe.sh"]
 

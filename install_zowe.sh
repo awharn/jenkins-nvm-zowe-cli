@@ -5,8 +5,8 @@ set -e
 
 # Ensure that a version was passed
 if [ -z "$1" ]; then
-    echo "No package tag was specified. Installing next."
-    PKG_TAG=next
+    echo "No package tag was specified. Installing zowe-v2-lts."
+    PKG_TAG=zowe-v2-lts
 else 
     PKG_TAG=$1
 fi
